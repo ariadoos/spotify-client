@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { login } from './services/authService'
 
 function App() {
   return (
@@ -16,8 +17,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React test
         </a>
+        <button onClick={async e => await login()}>
+          Login with spotify
+        </button>
       </header>
     </div>
   );
